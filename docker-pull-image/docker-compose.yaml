@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres18-docker-db-1
+    image: postgres:17.5
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      - ./initdb:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  odoo:
+    container_name: odoo18-docker-odoo-1
+    image: legacyg/dbms-itcloud-image:odoo18-futminna
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "8072:8072"
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo

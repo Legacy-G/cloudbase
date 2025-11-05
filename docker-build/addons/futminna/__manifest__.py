@@ -1,0 +1,26 @@
+{
+    'name': 'Futminna Suite',
+    'version': '1.0',
+    'category': 'Education',
+    'summary': 'Custom OpenEduCat bundle for Futminna',
+    'depends': [
+        'openeducat_activity',
+        'openeducat_admission',
+        'openeducat_assignment',
+        'openeducat_attendance',
+        'openeducat_classroom',
+        'openeducat_core',
+        'openeducat_erp',
+        'openeducat_exam',
+        'openeducat_facility',
+        'openeducat_fees',
+        'openeducat_library',
+        'openeducat_parent',
+        'openeducat_timetable',
+        'theme_web_openeducat',
+        # Add all submodules here
+    ],
+    'data': [],
+    'installable': True,
+    'application': True,
+}

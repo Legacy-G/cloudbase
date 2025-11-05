@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="footer_custom_futminna" inherit_id="website.layout">
+      <xpath expr="//footer" position="replace">
+        <footer class="bg-dark text-light pt-5 pb-3" style="font-size:16px;">
+          <div class="container">
+            <div class="row">
+              <!-- Services -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase fw-bold text-white" style="border-bottom: 2px solid purple; display: inline-block;">Services</h5>
+                <ul class="list-unstyled mt-3">
+                  <li><a href="https://futminna.edu.ng/staff-resources/" class="text-light">Staff</a></li>
+                  <li><a href="https://futminna.edu.ng/student-resources/" class="text-light">Student</a></li>
+                  <li><a href="https://parent.futminna.edu.ng/" class="text-light">Parent Portal</a></li>
+                  <li><a href="https://futminna.edu.ng/university-health-services/" class="text-light">Health &amp; Safety</a></li>
+                  <li><a href="https://futminna.edu.ng/alumni/" class="text-light">Alumni</a></li>
+                  <li><a href="https://staffschool.futminna.edu.ng/" class="text-light">Staff School</a></li>
+                  <li><a href="https://futminna.edu.ng/resources/" class="text-light">Resources</a></li>
+                </ul>
+              </div>
+
+              <!-- Campus Life -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase fw-bold text-white" style="border-bottom: 2px solid purple; display: inline-block;">Campus Life</h5>
+                <ul class="list-unstyled mt-3">
+                  <li><a href="#" class="text-light">Students Representative Council</a></li>
+                  <li><a href="#" class="text-light">Student Affairs</a></li>
+                  <li><a href="#" class="text-light">Sports/Clubs</a></li>
+                  <li><a href="#" class="text-light">Accommodations</a></li>
+                  <li><a href="https://play.google.com/store/apps/details?id=com.futminna" class="text-light">Download FUTMinna Mobile App</a></li>
+                </ul>
+              </div>
+
+              <!-- Other Links -->
+              <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="text-uppercase fw-bold text-white" style="border-bottom: 2px solid purple; display: inline-block;">Other Links</h5>
+                <ul class="list-unstyled mt-3">
+                  <li><a href="https://library.futminna.edu.ng/" class="text-light">Library</a></li>
+                  <li><a href="https://futminna.edu.ng/Academic_Calendar/" class="text-light">Calendar</a></li>
+                  <li><a href="http://irepo.futminna.edu.ng:8080/jspui/" class="text-light">Repository</a></li>
+                  <li><a href="https://eportal.futminna.edu.ng/procurement/index.html" class="text-light">Procurement</a></li>
+                  <li><a href="https://futminna.edu.ng/contact-us/" class="text-light">Contact Us</a></li>
+                  <li><a href="https://futminna.edu.ng/privacy-policy/" class="text-light">Privacy Policy</a></li>
+                  <li><a href="https://scholar.google.com/citations?view_op=view_org&amp;hl=en&amp;org=13270410522213281166" class="text-light">Google Scholar</a></li>
+                  <li><a href="https://www.researchgate.net/institution/Federal-University-of-Technology-Minna" class="text-light">ResearchGate</a></li>
+                  <li><a href="https://futminna.edu.ng/faq/" class="text-light">FAQ</a></li>
+                  <li><a href="https://futminna.edu.ng/university-testimonials/" class="text-light">Testimonials</a></li>
+                  <li><a href="https://futminna.edu.ng/audited-account/" class="text-light">Audited Account</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="border-light"/>
+
+            <!-- Branding and Social -->
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <p class="mb-0">© 2022 Federal University of Technology MINNA. All Rights Reserved. | <a href="https://its.futminna.edu.ng/" class="text-light">Powered by NIHUB Cloud Track IT-2025, FUTMinna</a></p>
+              </div>
+              <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                <a href="https://www.facebook.com/OFFICIALFUTMINNA/" target="_blank" class="text-light me-3"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/futminna_web" target="_blank" class="text-light me-3"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank" class="text-light me-3"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank" class="text-light"><i class="fa fa-mobile"></i></a>
+              </div>
+            </div>
+
+            <!-- Back to Top -->
+            <div class="text-center mt-4">
+              <a href="#top" class="btn btn-outline-light">↑ Back to Top</a>
+            </div>
+          </div>
+        </footer>
+      </xpath>
+    </template>
+  </data>
+</odoo>
