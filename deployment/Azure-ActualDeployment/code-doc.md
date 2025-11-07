@@ -143,51 +143,6 @@ kubectl -n odoo-prod delete service odoo-svc
 qebv-wawd-2fka
 
 
-# USERGROUP RESETTING IN ODOO
-# create a python script file named reset_user_groups.py:
-"""
-import odoo
-
-# Load Odoo config
-odoo.tools.config.parse_config(['--config=/etc/odoo/odoo.conf'])
-odoo.service.server.load_server_wide_modules()
-registry = odoo.modules.registry.Registry.new('it2025')
-
-with registry.cursor() as cr:
-    env = odoo.api.Environment(cr, odoo.SUPERUSER_ID, {})
-
-    portal_group = env.ref('base.group_portal')
-
-    # --- Students ---
-    students = env['res.users'].search([('login', 'ilike', 'student%')])
-    for user in students:
-        user.sudo().write({
-            'groups_id': [(4, portal_group.id)],
-            'password': 'student123'
-        })
-    print("Assigned {} student accounts to Portal group and reset passwords".format(len(students)))
-
-    # --- Faculty ---
-    faculty = env['res.users'].search([('login', 'ilike', 'faculty%')])
-    for user in faculty:
-        user.sudo().write({
-            'groups_id': [(4, portal_group.id)],
-            'password': 'staff123'
-        })
-    print("Assigned {} faculty accounts to Portal group and reset passwords".format(len(faculty)))
-
-    cr.commit()
-"""
-# upload it to cloud shell and copy to odoo pod
-kubectl -n odoo-prod cp usergroup-reset.py odoo-5d4577c586-s268p:/tmp/usergroup-reset.py
-
-# Exec into the Odoo pod
-kubectl -n odoo-prod exec -it odoo-5d4577c586-s268p -- /bin/bash
-
-# Run the script inside the Odoo pod
-python3 /tmp/usergroup-reset.py
 
 # 
 k6 run login-test.js
-
-### Load Testing Scripts for Odoo on AKS
