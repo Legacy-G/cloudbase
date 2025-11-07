@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: odoo-prod
 ---
-# ConfigMap for Odoo configuration (optional override)
+# ConfigMap for Odoo configuration
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -23,28 +23,50 @@ data:
     http_port = 8069
     gevent_port = 8072
     server_wide_modules = base,web
-    workers = 2
+    workers = 6                # squeeze more concurrency per pod
     csv_internal_sep = ,
     data_dir = /var/lib/odoo/sessions
-    geoip_city_db = /usr/share/GeoIP/GeoLite2-City.mmdb
-    geoip_country_db = /usr/share/GeoIP/GeoLite2-Country.mmdb
     screenshots = /tmp/odoo_tests
 ---
-# PersistentVolumeClaim for PostgreSQL
+# ConfigMap for Postgres initdb script
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: ConfigMap
 metadata:
-  name: postgres-pvc
+  name: initdb-scripts
   namespace: odoo-prod
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
-  storageClassName: standard
+data:
+  initdb.sh: |
+    #!/bin/bash
+    set -e
+    echo "Waiting for PostgreSQL to be ready..."
+    until pg_isready -U postgres; do
+      sleep 2
+    done
+    echo "PostgreSQL is ready."
+
+    # Create role 'odoo' if it doesn't exist
+    psql -U postgres <<EOF
+    DO $$
+    BEGIN
+       IF NOT EXISTS (SELECT FROM pg_roles WHERE rolname = 'odoo') THEN
+          CREATE ROLE odoo WITH LOGIN PASSWORD 'odoo' CREATEDB INHERIT;
+       END IF;
+    END
+    $$;
+    EOF
+
+    # Create database 'odoo' owned by 'odoo' if missing
+    psql -U postgres <<EOF
+    DO $$
+    BEGIN
+       IF NOT EXISTS (SELECT FROM pg_database WHERE datname = 'odoo') THEN
+          CREATE DATABASE odoo OWNER odoo;
+       END IF;
+    END
+    $$;
+    EOF
 ---
-# PostgreSQL Deployment
+# PostgreSQL Deployment (with initdb mount)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -70,22 +92,28 @@ spec:
               value: postgres
             - name: POSTGRES_PASSWORD
               value: postgres
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
           volumeMounts:
             - name: pgdata
               mountPath: /var/lib/postgresql/data
             - name: initdb
-              mountPath: /docker-entrypoint-initdb.d
+              mountPath: /docker-entrypoint-initdb.d   # mount initdb scripts
           readinessProbe:
             exec:
-              command: ["pg_isready", "-U", "odoo", "-d", "postgres"]
+              command: ["pg_isready", "-U", "postgres", "-d", "postgres"]
             initialDelaySeconds: 10
             periodSeconds: 5
             timeoutSeconds: 3
             failureThreshold: 5
       volumes:
         - name: pgdata
-          persistentVolumeClaim:
-            claimName: postgres-pvc
+          emptyDir: {}
         - name: initdb
           configMap:
             name: initdb-scripts
@@ -110,7 +138,7 @@ metadata:
   name: odoo
   namespace: odoo-prod
 spec:
-  replicas: 3   # scale up Odoo to 3 pods
+  replicas: 2                   # fit within quota: 2 pods × 6 workers each
   selector:
     matchLabels:
       app: odoo
@@ -136,10 +164,33 @@ spec:
               value: odoo
             - name: PASSWORD
               value: odoo
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
           volumeMounts:
             - name: config
               mountPath: /etc/odoo/odoo.conf
               subPath: odoo.conf
+          readinessProbe:
+            httpGet:
+              path: /web/login
+              port: 8069
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 5
+          livenessProbe:
+            httpGet:
+              path: /web/login
+              port: 8069
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 5
       volumes:
         - name: config
           configMap:

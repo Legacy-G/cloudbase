@@ -1,8 +1,7 @@
 # Get AKS credentials for kubectl access in the current shell session
 az aks get-credentials \
-  --resource-group it-cloudtrack2025-project \
-  --name odoo-aks \
-  --overwrite-existing
+  --resource-group cloudtrackit2025 \
+  --name cloudtrack
 
 # Get Nodes
 kubectl get nodes
@@ -107,6 +106,8 @@ http://4.253.33.191:8069
 kubectl delete pvc postgres-pvc -n odoo-prod
 
 # To Delete All Pods in the Namespace
+kubectl delete namespace odoo-prod
+
 kubectl delete pods --all -n odoo-prod
 
 # To Delete All services in the Namespace
@@ -139,6 +140,54 @@ kubectl -n odoo-prod delete deployment odoo
 kubectl -n odoo-prod delete service odoo-svc
 
 # hased admin password for odoo.conf: admin_passwd = admin
-f2te-996m-hhvs
-7jfz-62fa-t4iu
-guqq-56ix-datc
+qebv-wawd-2fka
+
+
+# USERGROUP RESETTING IN ODOO
+# create a python script file named reset_user_groups.py:
+"""
+import odoo
+
+# Load Odoo config
+odoo.tools.config.parse_config(['--config=/etc/odoo/odoo.conf'])
+odoo.service.server.load_server_wide_modules()
+registry = odoo.modules.registry.Registry.new('it2025')
+
+with registry.cursor() as cr:
+    env = odoo.api.Environment(cr, odoo.SUPERUSER_ID, {})
+
+    portal_group = env.ref('base.group_portal')
+
+    # --- Students ---
+    students = env['res.users'].search([('login', 'ilike', 'student%')])
+    for user in students:
+        user.sudo().write({
+            'groups_id': [(4, portal_group.id)],
+            'password': 'student123'
+        })
+    print("Assigned {} student accounts to Portal group and reset passwords".format(len(students)))
+
+    # --- Faculty ---
+    faculty = env['res.users'].search([('login', 'ilike', 'faculty%')])
+    for user in faculty:
+        user.sudo().write({
+            'groups_id': [(4, portal_group.id)],
+            'password': 'staff123'
+        })
+    print("Assigned {} faculty accounts to Portal group and reset passwords".format(len(faculty)))
+
+    cr.commit()
+"""
+# upload it to cloud shell and copy to odoo pod
+kubectl -n odoo-prod cp usergroup-reset.py odoo-5d4577c586-s268p:/tmp/usergroup-reset.py
+
+# Exec into the Odoo pod
+kubectl -n odoo-prod exec -it odoo-5d4577c586-s268p -- /bin/bash
+
+# Run the script inside the Odoo pod
+python3 /tmp/usergroup-reset.py
+
+# 
+k6 run login-test.js
+
+### Load Testing Scripts for Odoo on AKS

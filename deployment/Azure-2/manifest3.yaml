@@ -3,7 +3,6 @@ kind: Namespace
 metadata:
   name: odoo-prod
 ---
-# ConfigMap for Odoo configuration (optional override)
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -23,14 +22,12 @@ data:
     http_port = 8069
     gevent_port = 8072
     server_wide_modules = base,web
-    workers = 4
+    workers = 6
     csv_internal_sep = ,
     data_dir = /var/lib/odoo/sessions
-    geoip_city_db = /usr/share/GeoIP/GeoLite2-City.mmdb
-    geoip_country_db = /usr/share/GeoIP/GeoLite2-Country.mmdb
     screenshots = /tmp/odoo_tests
 ---
-# PostgreSQL Deployment
+# PostgreSQL Deployment (ephemeral, tuned resources, with initdb mount)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -56,14 +53,21 @@ spec:
               value: postgres
             - name: POSTGRES_PASSWORD
               value: postgres
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "2Gi"
           volumeMounts:
             - name: pgdata
               mountPath: /var/lib/postgresql/data
             - name: initdb
-              mountPath: /docker-entrypoint-initdb.d
+              mountPath: /docker-entrypoint-initdb.d   # <-- mount initdb scripts here
           readinessProbe:
             exec:
-              command: ["pg_isready", "-U", "odoo", "-d", "postgres"]
+              command: ["pg_isready", "-U", "postgres", "-d", "postgres"]
             initialDelaySeconds: 10
             periodSeconds: 5
             timeoutSeconds: 3
@@ -75,7 +79,6 @@ spec:
           configMap:
             name: initdb-scripts
 ---
-# PostgreSQL Service
 apiVersion: v1
 kind: Service
 metadata:
@@ -88,14 +91,14 @@ spec:
     - port: 5432
       targetPort: 5432
 ---
-# Odoo Deployment
+# Odoo Deployment (scaled replicas, tuned resources/probes)
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: odoo
   namespace: odoo-prod
 spec:
-  replicas: 1
+  replicas: 10                   # reduced replicas for quota, each pod has 6 workers
   selector:
     matchLabels:
       app: odoo
@@ -121,17 +124,38 @@ spec:
               value: odoo
             - name: PASSWORD
               value: odoo
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1Gi"
+            limits:
+              cpu: "1"
+              memory: "2Gi"
           volumeMounts:
-            # Optional: override baked-in config with ConfigMap
             - name: config
               mountPath: /etc/odoo/odoo.conf
               subPath: odoo.conf
+          readinessProbe:
+            httpGet:
+              path: /web/login
+              port: 8069
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 5
+          livenessProbe:
+            httpGet:
+              path: /web/login
+              port: 8069
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 5
       volumes:
         - name: config
           configMap:
             name: odoo-config
 ---
-# Odoo Service
 apiVersion: v1
 kind: Service
 metadata:

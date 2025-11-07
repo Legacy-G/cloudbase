@@ -1,0 +1,152 @@
+kubectl top pods -A
+NAME                                STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION      CONTAINER-RUNTIME
+aks-nodepool1-74413310-vmss000000   Ready    <none>   18h   v1.32.7   10.224.0.5    <none>        Ubuntu 22.04.5 LTS   5.15.0-1096-azure   containerd://1.7.28-1
+aks-nodepool1-74413310-vmss000001   Ready    <none>   18h   v1.32.7   10.224.0.4    <none>        Ubuntu 22.04.5 LTS   5.15.0-1096-azure   containerd://1.7.28-1
+egrep: warning: egrep is obsolescent; using grep -E
+                    kubernetes.azure.com/sku-cpu=2
+                    kubernetes.azure.com/sku-memory=7168
+  MemoryPressure                False   Thu, 06 Nov 2025 06:18:57 +0000   Wed, 05 Nov 2025 12:15:44 +0000   KubeletHasSufficientMemory      kubelet has sufficient memory available
+Capacity:
+  cpu:                2
+  memory:             7097744Ki
+Allocatable:
+  cpu:                1900m
+  memory:             5160336Ki
+  Namespace                   Name                                                    CPU Requests  CPU Limits    Memory Requests  Memory Limits   Age
+  cpu                1247m (65%)   16342m (860%)
+  memory             2382Mi (47%)  33680Mi (668%)
+                    kubernetes.azure.com/sku-cpu=2
+                    kubernetes.azure.com/sku-memory=7168
+  MemoryPressure                False   Thu, 06 Nov 2025 06:19:23 +0000   Wed, 05 Nov 2025 12:15:40 +0000   KubeletHasSufficientMemory      kubelet has sufficient memory available
+Capacity:
+  cpu:                2
+  memory:             7097736Ki
+Allocatable:
+  cpu:                1900m
+  memory:             5160328Ki
+  Namespace                   Name                                                      CPU Requests  CPU Limits    Memory Requests  Memory Limits   Age
+  cpu                1231m (64%)   22890m (1204%)
+  memory             2686Mi (53%)  40943904Ki (793%)
+NAMESPACE     NAME                                                     READY   STATUS    RESTARTS      AGE   IP             NODE                                NOMINATED NODE   READINESS GATES
+kube-system   ama-logs-6kl88                                           3/3     Running   0             17h   10.244.0.94    aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   ama-logs-rs-944b99f7d-hb7nl                              2/2     Running   0             17h   10.244.0.170   aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   ama-logs-sdspk                                           3/3     Running   0             17h   10.244.1.26    aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   ama-metrics-676b8547cc-jqd7k                             2/2     Running   0             16h   10.244.1.36    aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   ama-metrics-676b8547cc-v9v2z                             2/2     Running   0             16h   10.244.0.3     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   ama-metrics-ksm-54c68f5cb5-z4qvx                         1/1     Running   0             16h   10.244.1.221   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   ama-metrics-node-hbhzk                                   2/2     Running   0             16h   10.244.0.164   aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   ama-metrics-node-jkxp4                                   2/2     Running   0             16h   10.244.1.209   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   ama-metrics-operator-targets-6ff9b5d6d6-bx4bl            2/2     Running   3 (16h ago)   16h   10.244.0.35    aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   azure-cns-j76lz                                          1/1     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   azure-cns-wt8gz                                          1/1     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   azure-ip-masq-agent-htrlx                                1/1     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   azure-ip-masq-agent-s5k86                                1/1     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   cloud-node-manager-8xc85                                 1/1     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   cloud-node-manager-mds69                                 1/1     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   coredns-6865d647c6-h2kj7                                 1/1     Running   0             18h   10.244.0.5     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   coredns-6865d647c6-tz7gn                                 1/1     Running   0             18h   10.244.1.248   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   coredns-autoscaler-67d9d668db-l9jzw                      1/1     Running   0             18h   10.244.0.212   aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   csi-azuredisk-node-w7bpq                                 3/3     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   csi-azuredisk-node-wlsks                                 3/3     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   csi-azurefile-node-b8gwk                                 3/3     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   csi-azurefile-node-pt8qw                                 3/3     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   konnectivity-agent-7886bbb8f7-qscqj                      1/1     Running   0             17h   10.244.1.161   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   konnectivity-agent-7886bbb8f7-xn67l                      1/1     Running   0             17h   10.244.0.135   aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   konnectivity-agent-autoscaler-6ff7779788-254xx           1/1     Running   0             18h   10.244.0.13    aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   kube-proxy-db62g                                         1/1     Running   0             18h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+kube-system   kube-proxy-zvl8s                                         1/1     Running   0             18h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   metrics-server-66b7768944-2w6xl                          2/2     Running   0             18h   10.244.1.173   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   metrics-server-66b7768944-5grtp                          2/2     Running   0             18h   10.244.1.120   aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   retina-agent-2pg4q                                       1/1     Running   0             16h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+kube-system   retina-agent-69bqg                                       1/1     Running   0             16h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    alertmanager-kube-prom-stack-kube-prome-alertmanager-0   2/2     Running   0             17h   10.244.0.163   aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    kube-prom-stack-grafana-f5d67fcd6-jtpzf                  3/3     Running   0             17h   10.244.1.106   aks-nodepool1-74413310-vmss000000   <none>           <none>
+monitoring    kube-prom-stack-kube-prome-operator-54dbf574c4-gq9jh     1/1     Running   0             17h   10.244.1.204   aks-nodepool1-74413310-vmss000000   <none>           <none>
+monitoring    kube-prom-stack-kube-state-metrics-7b76d95fb4-6jxbz      1/1     Running   0             17h   10.244.0.186   aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    kube-prom-stack-prometheus-node-exporter-hxhxt           0/1     Pending   0             17h   <none>         <none>                              <none>           <none>
+monitoring    kube-prom-stack-prometheus-node-exporter-nj6gv           0/1     Pending   0             17h   <none>         <none>                              <none>           <none>
+monitoring    prometheus-alertmanager-0                                1/1     Running   0             17h   10.244.1.207   aks-nodepool1-74413310-vmss000000   <none>           <none>
+monitoring    prometheus-kube-prom-stack-kube-prome-prometheus-0       2/2     Running   0             17h   10.244.0.75    aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    prometheus-kube-state-metrics-6598698c97-9wg6b           1/1     Running   0             17h   10.244.1.241   aks-nodepool1-74413310-vmss000000   <none>           <none>
+monitoring    prometheus-prometheus-node-exporter-9mnn7                1/1     Running   0             17h   10.224.0.4     aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    prometheus-prometheus-node-exporter-vczdj                1/1     Running   0             17h   10.224.0.5     aks-nodepool1-74413310-vmss000000   <none>           <none>
+monitoring    prometheus-prometheus-pushgateway-6cddbcfff5-l92nq       1/1     Running   0             17h   10.244.0.72    aks-nodepool1-74413310-vmss000001   <none>           <none>
+monitoring    prometheus-server-c568bf4db-44cs2                        2/2     Running   0             17h   10.244.0.41    aks-nodepool1-74413310-vmss000001   <none>           <none>
+odoo-prod     db-8554889675-ldh8t                                      1/1     Running   0             17h   10.244.1.170   aks-nodepool1-74413310-vmss000000   <none>           <none>
+odoo-prod     odoo-5d4577c586-s268p                                    1/1     Running   0             17h   10.244.0.33    aks-nodepool1-74413310-vmss000001   <none>           <none>
+NAME                                CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+aks-nodepool1-74413310-vmss000000   445m         23%      3527Mi          69%         
+aks-nodepool1-74413310-vmss000001   321m         16%      4116Mi          81%         
+NAMESPACE     NAME                                                     CPU(cores)   MEMORY(bytes)   
+kube-system   ama-logs-6kl88                                           10m          279Mi           
+kube-system   ama-logs-rs-944b99f7d-hb7nl                              6m           210Mi           
+kube-system   ama-logs-sdspk                                           13m          262Mi           
+kube-system   ama-metrics-676b8547cc-jqd7k                             13m          252Mi           
+kube-system   ama-metrics-676b8547cc-v9v2z                             8m           210Mi           
+kube-system   ama-metrics-ksm-54c68f5cb5-z4qvx                         3m           29Mi            
+kube-system   ama-metrics-node-hbhzk                                   13m          289Mi           
+kube-system   ama-metrics-node-jkxp4                                   15m          290Mi           
+kube-system   ama-metrics-operator-targets-6ff9b5d6d6-bx4bl            3m           82Mi            
+kube-system   azure-cns-j76lz                                          2m           46Mi            
+kube-system   azure-cns-wt8gz                                          2m           51Mi            
+kube-system   azure-ip-masq-agent-htrlx                                1m           16Mi            
+kube-system   azure-ip-masq-agent-s5k86                                1m           23Mi            
+kube-system   cloud-node-manager-8xc85                                 1m           17Mi            
+kube-system   cloud-node-manager-mds69                                 1m           17Mi            
+kube-system   coredns-6865d647c6-h2kj7                                 2m           32Mi            
+kube-system   coredns-6865d647c6-tz7gn                                 2m           33Mi            
+kube-system   coredns-autoscaler-67d9d668db-l9jzw                      1m           13Mi            
+kube-system   csi-azuredisk-node-w7bpq                                 1m           88Mi            
+kube-system   csi-azuredisk-node-wlsks                                 1m           58Mi            
+kube-system   csi-azurefile-node-b8gwk                                 1m           66Mi            
+kube-system   csi-azurefile-node-pt8qw                                 1m           71Mi            
+kube-system   konnectivity-agent-7886bbb8f7-qscqj                      4m           29Mi            
+kube-system   konnectivity-agent-7886bbb8f7-xn67l                      3m           26Mi            
+kube-system   konnectivity-agent-autoscaler-6ff7779788-254xx           1m           13Mi            
+kube-system   kube-proxy-db62g                                         1m           33Mi            
+kube-system   kube-proxy-zvl8s                                         1m           46Mi            
+kube-system   metrics-server-66b7768944-2w6xl                          3m           41Mi            
+kube-system   metrics-server-66b7768944-5grtp                          3m           41Mi            
+kube-system   retina-agent-2pg4q                                       1m           106Mi           
+kube-system   retina-agent-69bqg                                       1m           108Mi           
+monitoring    alertmanager-kube-prom-stack-kube-prome-alertmanager-0   1m           36Mi            
+monitoring    kube-prom-stack-grafana-f5d67fcd6-jtpzf                  7m           324Mi           
+monitoring    kube-prom-stack-kube-prome-operator-54dbf574c4-gq9jh     3m           24Mi            
+monitoring    kube-prom-stack-kube-state-metrics-7b76d95fb4-6jxbz      2m           25Mi            
+monitoring    prometheus-alertmanager-0                                2m           16Mi            
+monitoring    prometheus-kube-prom-stack-kube-prome-prometheus-0       29m          341Mi           
+monitoring    prometheus-kube-state-metrics-6598698c97-9wg6b           2m           24Mi            
+monitoring    prometheus-prometheus-node-exporter-9mnn7                1m           13Mi            
+monitoring    prometheus-prometheus-node-exporter-vczdj                1m           15Mi            
+monitoring    prometheus-prometheus-pushgateway-6cddbcfff5-l92nq       1m           13Mi            
+monitoring    prometheus-server-c568bf4db-44cs2                        5m           261Mi           
+odoo-prod     db-8554889675-ldh8t                                      12m          259Mi           
+odoo-prod     odoo-5d4577c586-s268p                                    2m           824Mi           
+samuel [ ~ ]$ kubectl -n odoo-prod get svc odoo-svc -o wide
+kubectl -n odoo-prod describe svc odoo-svc
+NAME       TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                         AGE   SELECTOR
+odoo-svc   LoadBalancer   10.0.174.167   4.253.33.191   8069:30210/TCP,8072:30876/TCP   17h   app=odoo
+Name:                     odoo-svc
+Namespace:                odoo-prod
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=odoo
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.0.174.167
+IPs:                      10.0.174.167
+LoadBalancer Ingress:     4.253.33.191 (VIP)
+Port:                     http  8069/TCP
+TargetPort:               8069/TCP
+NodePort:                 http  30210/TCP
+Endpoints:                10.244.0.33:8069
+Port:                     longpoll  8072/TCP
+TargetPort:               8072/TCP
+NodePort:                 longpoll  30876/TCP
+Endpoints:                10.244.0.33:8072
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+samuel [ ~ ]$ 
