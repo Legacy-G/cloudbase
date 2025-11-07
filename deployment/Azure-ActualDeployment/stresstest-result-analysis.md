@@ -1,4 +1,4 @@
-<img width="1192" height="561" alt="image" src="https://github.com/user-attachments/assets/c3e270f1-6a66-421f-ae16-d3d65994943d" />## Math for scaling to 10k, 20k, 30k users
+## Math for scaling to 10k, 20k, 30k users
 
 From stress test results:
 
