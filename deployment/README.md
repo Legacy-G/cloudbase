@@ -1,4 +1,3 @@
-```markdown
 # CloudTrack-DBMS Deployment on Azure Kubernetes Service (AKS)
 
 ## 📌 Project Overview
