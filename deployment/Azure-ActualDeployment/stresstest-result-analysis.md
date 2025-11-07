@@ -1,17 +1,17 @@
-## Math for scaling to 10k, 20k, 30k users
+<img width="1192" height="561" alt="image" src="https://github.com/user-attachments/assets/c3e270f1-6a66-421f-ae16-d3d65994943d" />## Math for scaling to 10k, 20k, 30k users
 
 From stress test results:
 
 - With **100 VUs**, we saw ~235 successful logins and ~118 failures (≈66% success).
 - Latency p95 was ~24s, which is too high.
-- That tells us **one Odoo pod with 2 workers can realistically handle ~200–300 concurrent logins before lag/failure spikes**.
+- That tells us **one CloudTrack-DBMS pod with 2 workers can realistically handle ~200–300 concurrent logins before lag/failure spikes**.
 
 ---
 
 Let’s extrapolate:
 
 ### Assumptions
-- One Odoo worker can handle ~50–75 concurrent logins.
+- One CloudTrack-DBMS worker can handle ~50–75 concurrent logins.
 - One pod with 4 workers ≈ 200–300 concurrent users.
 - To keep latency <2s and failure <5%, we need enough pods/workers to spread the load.
 
@@ -39,7 +39,7 @@ Let’s extrapolate:
 
 ---
 
-### Odoo.conf scaling
+### CloudTrack-DBMS.conf scaling
 Update workers in `odoo.conf`:
 
 - For small scale (≤500 users): `workers = 4`
