@@ -4,65 +4,106 @@
     <template id="header_custom_futminna" inherit_id="website.layout">
       <xpath expr="//header" position="replace">
         <header id="top" class="o_header_standard shadow-sm" data-anchor="true" data-name="Header">
-          <nav class="navbar navbar-expand-lg navbar-light bg-primary py-3">
+          <nav class="navbar navbar-expand-lg navbar-light py-3" style="background:white !important;">
             <div class="container-fluid justify-content-between align-items-center">
-              <!-- Logo (Encircled) -->
-              <a class="navbar-brand d-flex align-items-center text-light" href="/">
+              
+              <!-- Logo -->
+              <a class="navbar-brand d-flex align-items-center text-dark" href="/">
                 <div style="width:50px; height:50px; border-radius:50%; overflow:hidden; background:white; padding:5px;">
                   <img src="/theme_web_openeducat/static/src/img/banner/logo.jpg" alt="FUTMinna Logo" class="img-fluid" style="width:100%; height:auto;"/>
                 </div>
-                <span class="fw-bold fs-5 ms-2">FUTMinna</span>
+                <!-- Text aligned to logo height -->
+                <div style="height:50px; display:flex; align-items:center; margin-left:8px;">
+                  <span style="color: #1e3a8a; font-weight:bold; font-size:16px; line-height:1.2; white-space:nowrap;">
+                    Federal University <br/> of Technology Minna
+                  </span>
+                </div>
               </a>
 
               <!-- Toggler -->
-              <button class="navbar-toggler text-light border-light" type="button" data-bs-toggle="collapse" data-bs-target="#top_menu_collapse">
+              <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#top_menu_collapse">
                 <span class="fa fa-bars" style="font-size:24px;"></span>
               </button>
 
               <!-- Navigation -->
               <div class="collapse navbar-collapse" id="top_menu_collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link text-light" href="/">Home</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="/shop">Shop</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="/event">Events</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="/slides">Courses</a></li>
-                  <li class="nav-item"><a class="nav-link text-light" href="/our-services">Services</a></li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">Company</a>
-                    <ul class="dropdown-menu bg-white">
-                      <li><a class="dropdown-item text-dark" href="/blog/2" style="transition: background 0.3s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">News</a></li>
-                      <li><a class="dropdown-item text-dark" href="/blog/3" style="transition: background 0.3s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">Success Stories</a></li>
-                      <li><a class="dropdown-item text-dark" href="/about-us" style="transition: background 0.3s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">About Us</a></li>
+                <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm me-auto mb-2 mb-lg-0"
+                    style="--bs-nav-link-color: var(--bs-blue);
+                           --bs-nav-pills-link-active-color: var(--bs-white);
+                           --bs-nav-pills-link-active-bg: #6a0dad; /* FUTMinna purple */
+                           background: white;">
+                  
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-5" 
+                       t-attf-class="nav-link rounded-5 #{'active' if request.httprequest.path == '/' else ''}" 
+                       href="/" role="tab">Home</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-5" 
+                       t-attf-class="nav-link rounded-5 #{'active' if request.httprequest.path.startswith('/slides') else ''}" 
+                       href="/slides" role="tab">Academics</a>
+                  </li>
+                  <li class="nav-item dropdown" role="presentation">
+                    <a class="nav-link dropdown-toggle rounded-5" href="#" data-bs-toggle="dropdown" role="tab">Company</a>
+                    <ul class="dropdown-menu bg-white border-0 shadow-sm">
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/staff-resources/">Staff</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/student-resources/">Students</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://parent.futminna.edu.ng">Parent Portal</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/university-health-services/">Health &amp; Safety</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/alumni/">Alumni</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://staffschool.futminna.edu.ng">Staff School</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/resources/">Resources</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item"><a class="nav-link text-light" href="/contactus">Contact Us</a></li>
+                  <li class="nav-item dropdown" role="presentation">
+                    <a class="nav-link dropdown-toggle rounded-5" href="#" data-bs-toggle="dropdown" role="tab">Institution</a>
+                    <ul class="dropdown-menu bg-white border-0 shadow-sm">
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/about-us/">Our History</a></li>
+                      <li><a class="dropdown-item text-primary" href="https://futminna.edu.ng/university-testimonials/">Success Stories</a></li>
+                      <li><a class="dropdown-item text-primary" href="/https://futminna.edu.ng/photo-gallery/">Gallery</a></li>
+                      <li><a class="dropdown-item text-primary" href="/https://futminna.edu.ng/the-management/">The Management</a></li>
+                    </ul>
+                  </li>
+                                    <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-5" 
+                       t-attf-class="nav-link rounded-5 #{'active' if request.httprequest.path.startswith('/event') else ''}" 
+                       href="/event" role="tab">Booking</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a class="nav-link rounded-5" 
+                       t-attf-class="nav-link rounded-5 #{'active' if request.httprequest.path.startswith('/contactus') else ''}" 
+                       href="/contactus" role="tab">Contact Us</a>
+                  </li>
                 </ul>
 
                 <!-- Cart and User -->
-                <ul class="navbar-nav ms-auto">
-                  <!-- Cart Icon -->
-                  <li class="nav-item me-3">
-                    <a class="nav-link position-relative text-light" href="/shop/cart">
+                <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm ms-auto"
+                    style="--bs-nav-link-color: var(--bs-blue);
+                           --bs-nav-pills-link-active-color: var(--bs-white);
+                           --bs-nav-pills-link-active-bg: #6a0dad; /* FUTMinna purple */
+                           background: white;">
+                  
+                  <li class="nav-item me-3" role="presentation">
+                    <a class="nav-link rounded-5 position-relative" href="/shop/cart">
                       <i class="fa fa-shopping-cart" style="font-size:18px;"></i>
                       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning my_cart_quantity" data-order-id="">0</span>
                     </a>
                   </li>
 
-                  <!-- User Dropdown -->
                   <t t-if="request.env.user.id != request.website.user_id.id">
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle text-light fw-bold" href="#" data-bs-toggle="dropdown">
+                    <li class="nav-item dropdown" role="presentation">
+                      <a class="nav-link dropdown-toggle rounded-5 fw-bold" href="#" data-bs-toggle="dropdown">
                         <t t-esc="request.env.user.name"/>
                       </a>
-                      <ul class="dropdown-menu dropdown-menu-end bg-white">
-                        <li><a class="dropdown-item text-dark" href="/my/home" style="transition: background 0.3s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">My Account</a></li>
-                        <li><a class="dropdown-item text-dark" href="/web/session/logout?redirect=/" style="transition: background 0.3s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='transparent'">Logout</a></li>
+                      <ul class="dropdown-menu dropdown-menu-end bg-white border-0 shadow-sm">
+                        <li><a class="dropdown-item text-primary" href="/my/home">My Portal</a></li>
+                        <li><a class="dropdown-item text-primary" href="/web/session/logout?redirect=/">Logout</a></li>
                       </ul>
                     </li>
                   </t>
                   <t t-if="request.env.user.id == request.website.user_id.id">
-                    <li class="nav-item">
-                      <a class="nav-link fw-bold text-light" href="/web/login">Sign In</a>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link rounded-5 fw-bold" href="/web/login">Sign In</a>
                     </li>
                   </t>
                 </ul>

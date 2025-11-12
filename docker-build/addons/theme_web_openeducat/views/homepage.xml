@@ -27,15 +27,17 @@
                                     <div class="carousel-item active">
                                         <div class="position-relative text-white" style="background-image: url('https://futminna.edu.ng/wp-content/uploads/2022/12/homeslide3short.png'); background-size: cover; background-position: center; height: 500px;">
                                         <div class="position-absolute top-50 start-0 translate-middle-y px-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;">
-                                            <h4 style="font-family:'Poppins'; color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">Federal University of Technology, Minna</h4>
+                                            <h4 style="color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">Federal University of Technology, Minna</h4>
                                             <div style="background: repeating-linear-gradient(45deg, #6a0dad, #6a0dad 10px, #4b0082 10px, #4b0082 20px); border-radius: 12px; padding: 10px 15px; display: inline-block; animation: slideIn 0.8s ease-out;">
                                             <h1 style="font-family:'Playfair Display'; color: white; font-size: 2.5rem; font-weight: bold; margin: 0;">Technology <span style="color: white;">For Empowerment</span></h1>
                                             </div>
-                                            <div style="display: flex; width: 100%; max-width: 200px; height: 40px; border-radius: 6px; overflow: hidden; margin-top: 15px;">
+
+                                            <!-- Button -->
+                                            <div style="display:flex; width:100%; max-width:200px; height:40px; border-radius:6px; overflow:hidden; margin-top:15px;">
                                             <a href="https://futminna.edu.ng/futminna.edu.ng/apply-to-futminna/"
-                                                style="width: 100%; background-color: white; color: black; text-align: center; line-height: 40px; text-decoration: none; font-weight: bold;
-                                                        border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;"
-                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'"
+                                                style="width:100%; background-color:white; color:black; text-align:center; line-height:40px; text-decoration:none; font-weight:bold;
+                                                        border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:transform 0.2s ease, box-shadow 0.2s ease;"
+                                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,255,0.25)'"
                                                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)'">
                                                 Apply To FUTMinna
                                             </a>
@@ -48,15 +50,17 @@
                                     <div class="carousel-item">
                                         <div class="position-relative text-white" style="background-image: url('https://futminna.edu.ng/wp-content/uploads/2022/12/senateshort-1024x406-two.png'); background-size: cover; background-position: center; height: 500px;">
                                         <div class="position-absolute top-50 start-0 translate-middle-y px-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;">
-                                            <h4 style="font-family:'Poppins'; color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">FUTMINNA</h4>
+                                            <h4 style="color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">FUTMINNA</h4>
                                             <div style="background: repeating-linear-gradient(45deg, #6a0dad, #6a0dad 10px, #4b0082 10px, #4b0082 20px); border-radius: 12px; padding: 10px 15px; display: inline-block; animation: slideIn 0.8s ease-out;">
                                             <h1 style="font-family:'Playfair Display'; color: white; font-size: 2.5rem; font-weight: bold; margin: 0;">Citadel <span style="color: white;">of Learning</span></h1>
                                             </div>
-                                            <div style="display: flex; width: 100%; max-width: 200px; height: 40px; border-radius: 6px; overflow: hidden; margin-top: 15px;">
+
+                                            <!-- Button -->
+                                            <div style="display:flex; width:100%; max-width:200px; height:40px; border-radius:6px; overflow:hidden; margin-top:15px;">
                                             <a href="https://futminna.edu.ng/futminna.edu.ng/apply-to-futminna/"
-                                                style="width: 100%; background-color: white; color: black; text-align: center; line-height: 40px; text-decoration: none; font-weight: bold;
-                                                        border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;"
-                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'"
+                                                style="width:100%; background-color:white; color:black; text-align:center; line-height:40px; text-decoration:none; font-weight:bold;
+                                                        border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:transform 0.2s ease, box-shadow 0.2s ease;"
+                                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,255,0.25)'"
                                                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)'">
                                                 Apply To FUTMinna
                                             </a>
@@ -69,15 +73,17 @@
                                     <div class="carousel-item">
                                         <div class="position-relative text-white" style="background-image: url('https://futminna.edu.ng/wp-content/uploads/2022/12/homeslide5.png'); background-size: cover; background-position: center; height: 500px;">
                                         <div class="position-absolute top-50 start-0 translate-middle-y px-4" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;">
-                                            <h4 style="font-family:'Poppins'; color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">FUTMINNA</h4>
+                                            <h4 style="color: white; font-weight: bold; margin-bottom: 8px; animation: slideIn 0.6s ease-out;">Federal University of Technology, Minna</h4>
                                             <div style="background: repeating-linear-gradient(45deg, #6a0dad, #6a0dad 10px, #4b0082 10px, #4b0082 20px); border-radius: 12px; padding: 10px 15px; display: inline-block; animation: slideIn 0.8s ease-out;">
                                             <h1 style="font-family:'Playfair Display'; color: white; font-size: 2.5rem; font-weight: bold; margin: 0;">Where Passion And <span style="color: white;">Promise Meets</span></h1>
                                             </div>
-                                            <div style="display: flex; width: 100%; max-width: 200px; height: 40px; border-radius: 6px; overflow: hidden; margin-top: 15px;">
+
+                                            <!-- Button -->
+                                            <div style="display:flex; width:100%; max-width:200px; height:40px; border-radius:6px; overflow:hidden; margin-top:15px;">
                                             <a href="https://futminna.edu.ng/futminna.edu.ng/apply-to-futminna/"
-                                                style="width: 100%; background-color: white; color: black; text-align: center; line-height: 40px; text-decoration: none; font-weight: bold;
-                                                        border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;"
-                                                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)'"
+                                                style="width:100%; background-color:white; color:black; text-align:center; line-height:40px; text-decoration:none; font-weight:bold;
+                                                        border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:transform 0.2s ease, box-shadow 0.2s ease;"
+                                                onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(0,0,255,0.25)'"
                                                 onmouseout="this.style.transform='none'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.1)'">
                                                 Apply To FUTMinna
                                             </a>
@@ -85,17 +91,7 @@
                                         </div>
                                         </div>
                                     </div>
-
                                     </div>
-
-                                    <!-- Controls -->
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#futminna-slider" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#futminna-slider" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    </button>
-
                                 </div>
                                 </div>
                             </div>
@@ -110,11 +106,11 @@
                                     <div class="col-12 o_colored_level o_animate o_anim_bounce_in o_visible" style="">
                                         <div class="py-3 section-title text-center">
                                             <span class="bg-primary-opacity subtitle">
-                                                Explore Top Features
+                                                Explore
                                             </span>
                                                 <h2 class="fw-bold py-3">
-                                                <span class="o_animated_text o_animate o_anim_fade_in o_visible" style="">Explore Top Courses Caterories
-                                                <br/> That Will Blow Your Mind</span>
+                                                <span class="o_animated_text o_animate o_anim_fade_in o_visible" style="">Explore Futminna Top School Caterories
+                                                <br/> Influencing Excellence With Innovation </span>
                                             </h2>
                                         </div>
                                     </div>
@@ -128,7 +124,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class="fw-bolder">
-                                                        Mechatronics Engineering
+                                                        Agriculture and Agricultural Technology
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                             22 Courses
@@ -145,7 +141,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class="fw-bolder">
-                                                        Cyber Security Science
+                                                        Electrical Engineering and Technology
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                             15 Courses
@@ -162,7 +158,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class=" fw-bolder">
-                                                        Civil Engineering
+                                                        Environmental Technology
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                         20 Courses
@@ -179,7 +175,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class=" fw-bolder">
-                                                        Computer Engineering
+                                                        Information and Communication Technology
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                         15 Courses
@@ -198,7 +194,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class=" fw-bolder">
-                                                        Agricultural &amp;amp; Bioresources Engineering
+                                                        Infrastructure Process Engineering and Technology
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                             28 Courses
@@ -215,7 +211,7 @@
                                                 </div>
                                                 <div class="content_card  text-center">
                                                     <h5 class=" fw-bolder">
-                                                        Architecture &amp;amp; Planning
+                                                        Medical Sciences
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                             12 Courses
@@ -232,7 +228,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class=" fw-bolder">
-                                                        Electrical &amp;amp; Electronics Engineering
+                                                        Science and Technology Education
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                         28 Courses
@@ -249,7 +245,7 @@
                                                 </div>
                                                 <div class="content_card text-center">
                                                     <h5 class="fw-bolder">
-                                                        Information &amp;amp; Communication Technology
+                                                        Postgraduate Studies
                                                     </h5>
                                                     <div class="px-1 text-900 categories-link-hover">
                                                         <a> 16 Courses</a>
@@ -262,243 +258,141 @@
                             </div>
                         </div>
                     </section>
-                <!-- Popular Courses Section -->
-                    <section class="o_colored_level py-5" style="background: #F9F9FF;">
-                        <div class="popular-courses" >
-                            <div class="container ">
-                                <div class="mb-3 title row">
-                                    <div class="col-12">
-                                        <div class="py-3 section-title text-center">
-                                            <span class="bg-primary-opacity subtitle">
-                                              Popular Our Course Offerings
-                                            </span>
-                                            <h2 class="fw-bold py-3">Discover New Learning Opportunities
 
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-4 justify-content-center">
-                                    <div class="col-md-6 col-lg-4 o_colored_level">
-                                        <div class="card p-4 shadow-sm  h-100 hover">
-                                            <img src="/theme_web_openeducat/static/src/img/banner/course-thumb-6-min.jpg" class="card-img-top o_animate o_anim_bounce_in o_visible rounded-2" alt="React Course" loading="eager" style=""/>
-                                            <div>
-                                                <div class="d-flex gap-2 mt-3">
-                                                    <div class="text-warning">
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                    </div>
-                                                    (11 Reviews)
-                                                </div>
-                                                <h4 class="py-2">Introduction To Python Programming </h4>
-
-                                                <p class="card-text">Learn the fundamentals of Python
-                                                    programming in this beginner-friendly course.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-4 o_colored_level">
-                                        <div class="card p-4 shadow-sm  h-100 hover">
-                                            <img src="/theme_web_openeducat/static/src/img/banner/course-thumb-2-min.jpg" class="card-img-top o_animate o_anim_bounce_in o_visible rounded-2" alt="PHP Course" loading="eager" style=""/>
-                                            <div>
-                                                <div class="d-flex gap-2 mt-3">
-                                                    <div class="text-warning">
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                    </div>
-                                                    (13 Reviews)
-                                                </div>
-                                                <h4 class="py-2">Learn Mathematics
-                                                </h4>
-
-                                                <p class="card-text"> Unlock the world of numbers, shapes,
-                                                 and logic with our comprehensive mathematics course.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-4 o_colored_level">
-                                        <div class="card p-4 shadow-sm h-100 hover">
-                                            <img src="/theme_web_openeducat/static/src/img/banner/course-thumb-3-min.jpg" class="card-img-top o_animate o_anim_bounce_in o_visible rounded-2" alt="Angular Course" loading="eager" style=""/>
-                                            <div>
-                                                <div class="d-flex gap-2 mt-3">
-                                                    <div class="text-warning">
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                        <i class="fa fa-star"/>
-                                                    </div>
-                                                    (15 Reviews)
-                                                </div>
-                                                <h4 class=" py-2">Become a Coffee Expert: How to Make the Perfect Cup
-                                                </h4>
-
-                                                <p class="card-text">Unlock the art of brewing the perfect
-                                                 cup of coffee with our comprehensive course.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="align-items-center d-flex h-100 justify-content-center mt-5">
-                                    <div class="d-contents mt-5 text-center">
-                                        <button class="hover-button btn btn-lg btn-primary">
-
-                                            Load More Course (40)
-
-                                        </button>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
                 <!-- About Section -->
                     <section id="about" class="o_colored_level">
-
                         <div class="oe-about-area bg-color-white oe-section-gapTop pb_md--80 pb_sm--80 about-style-1">
                             <div class="container">
-                                <div class="row g-5 align-items-center">
-                                    <div class="col-lg-6 o_colored_level o_animate o_anim_flip_in_y o_visible" style="">
-                                        <div class="oe-thumbnail-wrapper">
-                                            <div class="oe-thumbnail image-1">
-                                                <img data-parallax="{andquot;xandquot;: 0, andquot;yandquot;: -20}" src="/theme_web_openeducat/static/src/img/banner/about-01.png" alt="Education Images" style="transform: translate3d(0px, 20.007px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);" loading="eager"/>
-                                            </div>
-                                            <div class="oe-thumbnail image-2 d-none d-xl-block">
-                                                <img data-parallax="{andquot;xandquot;: 0, andquot;yandquot;: 60}" class="rounded-2" src="/theme_web_openeducat/static/src/img/banner/about-02.png" alt="Education Images" style="transform: translate3d(0px, 67.151px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);" loading="eager"/>
-                                            </div>
-                                            <div class="oe-thumbnail image-3 d-none d-md-block">
-                                                <img data-parallax="{andquot;xandquot;: 0, andquot;yandquot;: 80}" src="/theme_web_openeducat/static/src/img/banner/about-03.png" alt="Education Images" style="transform: translate3d(0px, 17.538px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1);" loading="eager"/>
+                            <div class="row g-5 align-items-center">
+                                                                <div class=" mb-3 title row">
+                                        <div class="col-12 o_colored_level o_animate o_anim_bounce_in o_visible" style="">
+                                            <div class="py-3 section-title text-center">
+                                                <span class="bg-primary-opacity subtitle">
+                                                    About Us
+                                                </span>
+                                                    <h2 class="fw-bold py-3">
+                                                    <span class="o_animated_text o_animate o_anim_fade_in o_visible" style="">History Of FUTMINNA </span>
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 o_colored_level o_animate o_anim_flip_in_y o_visible" style="">
-                                        <div class="inner-about pl--50 pl_sm--0 pl_md--0">
-                                            <div class="section-title py-3 text-start">
-                                                <span class="subtitle mb-4">Know About Us</span>
-                                                <h2 class="title pt-4 fw-bold">Know About <br/>
-                                                     Learning Platform</h2>
-                                            </div>
 
-                                            <p class="description" style="margin-top: 30px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-
-
-                                            <div class="oe-feature-wrapper mt--20 ml_dec_20">
-                                                <div class="oe-feature feature-style-2 oe-radius hover">
-                                                    <div class="icon bg-pink-opacity">
-                                                        <i class="fa fa-eye"/>
-                                                    </div>
-                                                    <div class="feature-content">
-                                                        <h6 class="feature-title">Our Vision</h6>
-                                                        <p class="feature-description">To become a world class and Nigeria’s leading University recognized for its excellence in capacity building and service delivery.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="oe-feature feature-style-2 oe-radius hover">
-                                                    <div class="icon bg-primary-opacity">
-                                                        <i class="fa fa-bullseye"/>
-                                                    </div>
-                                                    <div class="feature-content">
-                                                        <h6 class="feature-title">Our Mission</h6>
-                                                        <p class="feature-description">The university is committed to the training of skilled and innovative work-force that would transform Nigeria’s natural resources into goods and services driven by entrepreneurship and ICT, to positively affect the economy and thus the quality of life of her people.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="about-btn mt--40">
-                                                <a class="oe-btn btn-gradient hover-icon-reverse" href="#">
-                                                    <span class="icon-reverse-wrapper">
-                                                        <button class="hover-button btn btn-lg mt-4 btn-primary">
-
-                                                        More About Us
-
-                                                        </button>
-                                                        <span class="btn-icon">
-                                                            <i class="feather-arrow-right"/>
-                                                        </span>
-                                                        <span class="btn-icon">
-                                                            <i class="feather-arrow-right"/>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
+                                <!-- LEFT: Adopted official FUTMINNA image -->
+                                <div class="col-lg-6 o_colored_level o_animate o_anim_flip_in_y o_visible">
+                                <div class="oe-thumbnail-wrapper">
+                                    <div class="oe-thumbnail image-hero" style="position:relative; overflow:hidden; border-radius:12px;">
+                                    <img src="https://futminna.edu.ng/wp-content/uploads/2022/12/homeslide3short.png"
+                                        alt="Know Us Better - History of FUTMINNA"
+                                        style="width:100%; height:auto; display:block;"
+                                        loading="eager"/>
+                                    <div style="position:absolute; left:0; top:0; right:0; bottom:0;
+                                                background: linear-gradient(180deg, rgba(10,10,10,0.0) 0%, rgba(10,10,10,0.06) 100%);
+                                                pointer-events:none;"></div>
                                     </div>
                                 </div>
+                                </div>
+
+                                <!-- RIGHT: Preserve text, features, and button -->
+                                <div class="col-lg-6 o_colored_level o_animate o_anim_flip_in_y o_visible">
+                                <div class="inner-about pl--50 pl_sm--0 pl_md--0">
+
+                                    <p class="description" style="margin-top: 30px;">
+                                        The Federal University of Technology, Minna is a Federal Government owned University in Nigeria. It was established on 1st February, 1983. The objective for its establishment is to give effect to the Nation’s drive for the much-needed self-reliance in Science, Engineering and especially Technology. It is a specialized University of Technology.
+                                    </p>
+
+                                    <div class="oe-feature-wrapper mt--20 ml_dec_20">
+                                    <div class="oe-feature feature-style-2 oe-radius hover">
+                                        <div class="icon bg-pink-opacity">
+                                        <i class="fa fa-eye"/>
+                                        </div>
+                                        <div class="feature-content">
+                                        <h6 class="feature-title">Our Vision</h6>
+                                        <p class="feature-description">To become a world class and Nigeria’s leading University recognized for its excellence in capacity building and service delivery.</p>
+                                        </div>
+                                    </div>
+                                    <div class="oe-feature feature-style-2 oe-radius hover">
+                                        <div class="icon bg-primary-opacity">
+                                        <i class="fa fa-bullseye"/>
+                                        </div>
+                                        <div class="feature-content">
+                                        <h6 class="feature-title">Our Mission</h6>
+                                        <p class="feature-description">The university is committed to the training of skilled and innovative work-force that would transform Nigeria’s natural resources into goods and services driven by entrepreneurship and ICT, to positively affect the economy and thus the quality of life of her people.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="about-btn mt--40">
+                                    <a class="oe-btn btn-gradient hover-icon-reverse" href="https://futminna.edu.ng/about-us/">
+                                        <span class="icon-reverse-wrapper">
+                                        <button class="hover-button btn btn-lg mt-4 btn-primary">More About Us</button>
+                                        <span class="btn-icon"><i class="feather-arrow-right"/></span>
+                                        <span class="btn-icon"><i class="feather-arrow-right"/></span>
+                                        </span>
+                                    </a>
+                                    </div>
+                                </div>
+                                </div>
+
+                            </div>
                             </div>
                         </div>
                     </section>
+
                 <!-- Faculty Innovation -->
                     <section class="call_to_aection_section py-5">
-                    <div class="call_to_action">
-                        <div class="container">
-                        <div class="row g-4">
-                            <!-- Card 1 (Left Animated) -->
-                            <div class="col-lg-4 col-md-12 o_colored_level o_animate o_anim_slide_in o_anim_from_left o_visible" style="">
-                            <div class="p-4 shadow rounded bg-white h-100">
-                                <div class="row align-items-center">
-                                <div class="col-12 text-center mb-3">
-                                    <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/one-768x508.png" alt="Faculty Innovation" loading="eager"/>
+                        <div class="call_to_action">
+                            <div class="container">
+                            <div class="row g-4">
+                                <!-- Card 1 (Left Animated) -->
+                                <div class="col-lg-4 col-md-12 o_colored_level o_animate o_anim_slide_in o_anim_from_left o_visible" style="">
+                                <div class="p-4 shadow rounded bg-white h-100">
+                                    <div class="row align-items-center">
+                                    <div class="col-12 text-center mb-3">
+                                        <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/one-768x508.png" alt="Faculty Innovation" loading="eager"/>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <h4 class="fw-bolder">Faculty Innovation</h4>
+                                        <p class="py-2 text-600" style="font-size: 18px;">An innovative Centre of excellence committed to training 21st-century industry-ready graduates that would change the future of engineering in Nigeria and the world at large.</p>
+                                        <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 text-center">
-                                    <h4 class="fw-bolder">Faculty Innovation</h4>
-                                    <p class="py-2 text-600" style="font-size: 18px;">An innovative Centre of excellence committed to training 21st-century industry-ready graduates that would change the future of engineering in Nigeria and the world at large.</p>
-                                    <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
                                 </div>
-                                </div>
-                            </div>
-                            </div>
 
-                            <!-- Card 2 (Center Static) -->
-                            <div class="col-lg-4 col-md-12 o_colored_level" style="">
-                            <div class="p-4 shadow rounded bg-white h-100">
-                                <div class="row align-items-center">
-                                <div class="col-12 text-center mb-3">
-                                    <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/Low-cost-PV-Lighting-System-1-768x508.png" alt="Low-cost PV Lighting System" loading="eager"/>
+                                <!-- Card 2 (Center Static) -->
+                                <div class="col-lg-4 col-md-12 o_colored_level" style="">
+                                <div class="p-4 shadow rounded bg-white h-100">
+                                    <div class="row align-items-center">
+                                    <div class="col-12 text-center mb-3">
+                                        <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/Low-cost-PV-Lighting-System-1-768x508.png" alt="Low-cost PV Lighting System" loading="eager"/>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <h4 class="fw-bolder">Faculty Innovation</h4>
+                                        <p class="py-2 text-600" style="font-size: 18px;">Advanced Engineering Innovation Research Group (AEIRG) developed and produced Low-cost PV Lighting systems as part of its attempts to commercialize research and development products.</p>
+                                        <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div class="col-12 text-center">
-                                    <h4 class="fw-bolder">Faculty Innovation</h4>
-                                    <p class="py-2 text-600" style="font-size: 18px;">Advanced Engineering Innovation Research Group (AEIRG) developed and produced Low-cost PV Lighting systems as part of its attempts to commercialize research and development products.</p>
-                                    <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
                                 </div>
-                                </div>
-                            </div>
-                            </div>
 
-                            <!-- Card 3 (Right Animated) -->
-                            <div class="col-lg-4 col-md-12 o_colored_level o_animate o_anim_slide_in o_anim_from_right o_visible" style="">
-                            <div class="p-4 shadow rounded bg-white h-100">
-                                <div class="row align-items-center">
-                                <div class="col-12 text-center mb-3">
-                                    <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/mobile-box-1-1-768x508.png" alt="Mobile Energy Box" loading="eager"/>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <h4 class="fw-bolder">Faculty Innovation</h4>
-                                    <p class="py-2 text-600" style="font-size: 18px;">Advanced Engineering Innovation Research Group (AEIRG) a multidisciplinary, industry-focused research organization developed and produced Mobile Energy Box.</p>
-                                    <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
+                                <!-- Card 3 (Right Animated) -->
+                                <div class="col-lg-4 col-md-12 o_colored_level o_animate o_anim_slide_in o_anim_from_right o_visible" style="">
+                                <div class="p-4 shadow rounded bg-white h-100">
+                                    <div class="row align-items-center">
+                                    <div class="col-12 text-center mb-3">
+                                        <img class="img-fluid rounded-4" src="https://futminna.edu.ng/wp-content/uploads/2022/12/mobile-box-1-1-768x508.png" alt="Mobile Energy Box" loading="eager"/>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <h4 class="fw-bolder">Faculty Innovation</h4>
+                                        <p class="py-2 text-600" style="font-size: 18px;">Advanced Engineering Innovation Research Group (AEIRG) a multidisciplinary, industry-focused research organization developed and produced Mobile Energy Box.</p>
+                                        <a href="#" class="hover-button btn btn-md btn-primary" style="color: white; font-size: 18px;">Learn more</a>
+                                    </div>
+                                    </div>
                                 </div>
                                 </div>
                             </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
                     </section>
 
                 <!-- Stats Section -->
@@ -612,7 +506,7 @@
                                                <ul class="d-flex gap-3 list-unstyled pt-3">
                                                     <li class="align-items-center d-flex gap-2">
                                                         <i class="fa fa-map-marker"/>
-                                                        New York
+                                                        Abuja
                                                     </li>
                                                     <li class="align-items-center d-flex gap-2">
                                                         <i class="fa fa-clock-o"/>
@@ -881,18 +775,10 @@
                                     <div class="align-content-center col-lg-5 col-md-12 col-sm-12 col-xl-5 o_colored_level o_animate o_anim_slide_in o_anim_from_right o_visible" style="">
 
                                             <ul class="d-flex gap-3 list-unstyled">
-                                                    <!-- <i>
-                                                        <a class="object-fit-cover">
-                                                            <div class="d-flex h-100 p-2 shadow-lg change-img  img-overlay">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/Ms. John Olorunsogo.jpg" class="card-img-top rounded-2" alt="React Course" name="janesmith" loading="eager"/>
-                                                            </div>
-                                                        </a>
-                                                    </i> -->
-
                                                     <i>
                                                         <a class="object-fit-cover">
-                                                            <div class="d-flex h-100 p-2 shadow-lg change-img">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/Cloud Class.jpg" class="card-img-top rounded-2" alt="React Course" name="mamesmary" loading="eager"/>
+                                                            <div class="d-flex h-100 p-2 shadow-lg change-img  img-overlay">
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/cloud.jpg" class="card-img-top rounded-2" alt="React Course" name="janesmith" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
                                                             </div>
                                                         </a>
                                                     </i>
@@ -900,7 +786,15 @@
                                                     <i>
                                                         <a class="object-fit-cover">
                                                             <div class="d-flex h-100 p-2 shadow-lg change-img">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/team-04.jpg" class="card-img-top rounded-2" alt="React Course" name="Olivia" loading="eager"/>
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/student_1_g.jpg" class="card-img-top rounded-2" alt="React Course" name="mamesmary" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
+                                                            </div>
+                                                        </a>
+                                                    </i>
+
+                                                    <i>
+                                                        <a class="object-fit-cover">
+                                                            <div class="d-flex h-100 p-2 shadow-lg change-img">
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/student_5ns.jpg" class="card-img-top rounded-2" alt="React Course" name="Olivia" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
                                                             </div>
                                                         </a>
                                                     </i>
@@ -911,7 +805,7 @@
                                                     <i>
                                                         <a class="object-fit-cover">
                                                             <div class="d-flex h-100 p-2 shadow-lg change-img">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/team-05.jpg" class="card-img-top rounded-2" alt="React Course" name="thomasdal" loading="eager"/>
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/student_6j.jpg" class="card-img-top rounded-2" alt="React Course" name="thomasdal" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
                                                             </div>
                                                         </a>
                                                     </i>
@@ -919,7 +813,7 @@
                                                     <i>
                                                         <a class="object-fit-cover">
                                                             <div class="d-flex h-100 p-2 shadow-lg change-img">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/team-02.jpg" class="card-img-top rounded-2" alt="React Course" name="christopherlisa" loading="eager"/>
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/student_14aa.jpg" class="card-img-top rounded-2" alt="React Course" name="christopherlisa" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
                                                             </div>
                                                         </a>
                                                     </i>
@@ -927,7 +821,7 @@
                                                     <i>
                                                         <a class="object-fit-cover">
                                                             <div class="d-flex h-100 p-2 shadow-lg change-img">
-                                                                <img src="/theme_web_openeducat/static/src/img/banner/team-01.jpg" class="card-img-top rounded-2" alt="React Course" name="sosephsara" loading="eager"/>
+                                                                <img src="/theme_web_openeducat/static/src/img/banner/student_18ee.jpg" class="card-img-top rounded-2" alt="React Course" name="sosephsara" loading="eager" style="width:255px;height:375px;object-fit:cover;"/>
                                                             </div>
                                                         </a>
                                                     </i>

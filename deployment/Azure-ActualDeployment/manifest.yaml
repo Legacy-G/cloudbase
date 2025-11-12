@@ -110,7 +110,7 @@ spec:
           command: ['sh', '-c', 'until pg_isready -h db -U postgres; do echo waiting for db; sleep 2; done;']
       containers:
         - name: odoo
-          image: legacyg/dbmsdocker:with-addons-v1
+          image: legacyg/cloudbase:finalle
           ports:
             - containerPort: 8069
             - containerPort: 8072

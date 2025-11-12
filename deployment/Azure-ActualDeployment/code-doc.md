@@ -97,8 +97,8 @@ kubectl -n odoo-prod port-forward deploy/odoo 8069:8069
 # Now access Odoo at http://localhost:8069 in your web browser
 
 # Aceess Odoo Web Interface
-http://4.253.33.191:8069/web/database/manager
-http://4.253.33.191:8069
+http://4.253.40.132:8069/web/database/manager
+http://4.253.40.132:8069
 
 # TO DELETE OLD RESOURCES
 
@@ -140,9 +140,16 @@ kubectl -n odoo-prod delete deployment odoo
 kubectl -n odoo-prod delete service odoo-svc
 
 # hased admin password for odoo.conf: admin_passwd = admin
-qebv-wawd-2fka
-
+kk6j-4ffd-az87
+qaey-vgwe-ax5w 
 
 
 # 
 k6 run login-test.js
+
+#
+$env:K6_PROMETHEUS_RW_SERVER_URL="http://prometheus-server.monitoring.svc.cluster.local:80/api/v1/write"
+k6 run .\odoo-login-test.js
+
+#
+http://4.253.12.150:3000/d/7f02cc8e-dc66-46ab-b573-a753857be97c/kubernetes-cluster-monitoring-via-prometheus?orgId=1&from=2025-11-12T09:04:34.798Z&to=2025-11-12T09:14:34.798Z&timezone=browser&var-Node=$__all&refresh=10s&var-query0=&var-namespace=&editPanel=46
